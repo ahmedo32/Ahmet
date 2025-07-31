@@ -1,0 +1,65 @@
+name: paper_trails
+description: "OCR scanning & record-keeping app"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  package_info_plus: ^4.0.0
+  # OCR & image handling
+  google_ml_kit: ^0.16.3
+  image: ^4.1.7
+  path_provider: ^2.1.2
+  sqflite: ^2.3.2
+
+  # Networking & env
+  http: ^0.13.0
+  flutter_dotenv: ^5.0.2
+
+  # Camera & UI
+  image_picker: ^0.8.0
+  provider: ^6.0.5
+  shared_preferences: ^2.2.2
+  flutter_local_notifications: ^14.0.0
+
+  # File sharing & PDFs
+  path: ^1.9.0
+  intl: ^0.20.2
+  share_plus: ^8.0.0
+  pdf: ^3.10.1
+  printing: ^5.9.0
+
+  # Misc
+  cupertino_icons: ^1.0.8
+  crop_your_image: ^2.0.0
+  flutter_localizations:
+    sdk: flutter
+  flutter_native_splash: ^2.2.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_name:
+  name: "PaperTrails"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  remove_alpha: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - .env                   # <— include your backend URL here
+    - assets/icons/          # your app icon and other images
